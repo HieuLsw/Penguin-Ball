@@ -1,0 +1,167 @@
+#!../expect --
+# 03/01/2008 - 1.0 - Limited Release [jhufnage]
+# 04/08/2008 - 1.1 - Added versioning information to the title bar [jhufnage]
+# 11/16/2009 - 1.2 - Enabled varable resolution [jhufnage]
+package require Expect
+package require tile
+
+
+wm title . "CAEN VNC v1.2"
+wm iconname . "CAENVNC"
+wm resizable . 0 0
+
+set URL "http://www.engin.umich.edu/caen/connect/vnc.html"
+set v_currentresh "[expr {[winfo screenwidth .]}]"
+set v_currentresv "[expr {[winfo screenheight .]}]"
+#set v_username "$::env(USERNAME)"
+set v_username "$::env(USER)"
+set cotvncdir "$::env(COTVNCDIR)"
+
+set v_password ""
+set v_hostname "vnc.engin.umich.edu"
+
+#####################################################################
+# Configure Hostname label and text box
+#####################################################################
+frame  .hostname -bd 2
+label  .hostname.label -text Hostname: -width 10 -anchor w
+ttk::combobox .hostname.combobox -textvariable v_hostname -values "vnc.engin.umich.edu"
+pack   .hostname.label -side left
+pack   .hostname.combobox  -side left
+
+#####################################################################
+# Configure Login label and text box
+#####################################################################
+frame  .username -bd 2
+label  .username.label -text Username: -width 10 -anchor w
+entry  .username.entry -relief sunken
+.username.entry config -textvariable v_username 
+pack   .username.label -side left
+pack   .username.entry -side left
+
+#####################################################################
+# Configure Password label and text box
+#####################################################################
+frame  .password -bd 2
+label  .password.label -text Password: -width 10 -anchor w
+entry  .password.entry -relief sunken
+.password.entry config -textvariable v_password -show "*" 
+pack   .password.label -side left
+pack   .password.entry -side left
+
+#####################################################################
+# Configure Resolution label and list box
+#####################################################################
+frame  .screenres -bd 2
+label  .screenres.reslabel -text Resolution: -width 10 -anchor w
+ttk::combobox .screenres.comboboxh -width 5 -textvariable v_currentresh -values "800 1024 1280 1400 1600 1680 1920 2560"
+label  .screenres.xlabel -text x -width 1 -anchor w
+ttk::combobox .screenres.comboboxv -width 5 -textvariable v_currentresv -values "600 768 800 1024 1050 1200 1600"
+pack   .screenres.reslabel -side left
+pack   .screenres.comboboxh  -side left
+pack   .screenres.xlabel -side left
+pack   .screenres.comboboxv  -side left
+
+####################################################################
+# Configure Status label
+#####################################################################
+frame	.status -bd 2
+label	.status.label
+pack	.status.label -side left
+.status.label config -text "Awaiting credentials..."
+
+#####################################################################
+# Configure Buttons
+#####################################################################
+frame	.buttons -bd 2
+button	.buttons.ok -text "Connect" -borderwidth 1m -command "showScreen \$v_hostname \$v_username \$v_password"
+button	.buttons.dismiss -text "Cancel" -command "destroy ."
+button	.buttons.help -text "Help" -command "exec [auto_execok start] {$URL}"
+bind	. <Return> ".buttons.ok invoke"
+bind	. <F1> ".buttons.help invoke"
+pack	.buttons.ok .buttons.dismiss .buttons.help -side left -expand 1
+pack	.buttons -side bottom -fill x -pady 2m
+
+#####################################################################
+# Pack everything into the window
+#####################################################################
+pack	.hostname .username .password .screenres .status .buttons -fill x
+
+#####################################################################
+# Focus and Raise window
+#####################################################################
+focus .password.entry
+raise .
+
+set wx [expr {([winfo screenwidth .]-[winfo width .])/2}]
+set wy [expr {([winfo screenheight .]-[winfo height .])/2}]
+wm geometry . +$wx+$wy
+
+#####################################################################
+# Let's run it...
+#####################################################################
+proc showScreen {ss_host ss_user ss_pass} {
+global v_currentresh
+global v_currentresv
+global env
+
+if { [string is integer -strict $v_currentresh] == 0 } {
+	.status.label config -text "Fix horizontal resolution!"
+	focus .screenres.comboboxh
+	return
+}
+if { [string is integer -strict $v_currentresv] == 0 } {
+	.status.label config -text "Fix vertical resolution!"
+	focus .screenres.comboboxv
+	return
+}
+
+
+#set port $resolution($v_currentres)
+.buttons.ok config -state disabled
+
+set env(CAENVNCSIZE) ${v_currentresh}x${v_currentresv}
+set port   5984
+
+set fs " "
+if { [string compare "$v_currentresh" "[expr {[winfo screenwidth .]}]"] == 0 } { 
+   if { [string compare "$v_currentresv" "[expr {[winfo screenheight .]}]"] == 0 } {
+	set fs "--FullScreen"
+   }
+}
+set timeout -1
+
+.status.label config -text ""
+.status.label config -text "Connecting $ss_host"
+
+
+
+
+exp_spawn ssh -L $port:localhost:$port $ss_user@$ss_host "echo hello\;cat"
+
+expect {
+	"Are you sure*"  	{exp_send "yes\r"}
+	"$ss_user*" 		{exp_send "$ss_pass\r"}
+	"hello*"  			{wm withdraw .;exec $::env(COTVNCDIR)/Chicken\ of\ the\ VNC $fs localhost:$port 2>>/dev/null; destroy .;exp_close;exit}
+       }
+expect {
+	"$ss_user*" 		{exp_send "$ss_pass\r"}
+	"hello*"  			{wm withdraw .;exec $::env(COTVNCDIR)/Chicken\ of\ the\ VNC $fs localhost:$port 2>>/dev/null; destroy .;exp_close;exit}
+       }
+expect {
+	"Permission*" 		{exp_close; showErr}
+	"hello*"  			{wm withdraw .;exec $::env(COTVNCDIR)/Chicken\ of\ the\ VNC $fs localhost:$port 2>>/dev/null; destroy .;exp_close;exit}
+       }
+	   
+.buttons.ok config -state normal	 
+}
+
+#####################################################################
+# Error
+#####################################################################
+proc showErr {} {
+	.status.label config -text "Login failed!"
+	.buttons.ok config -state normal
+}
+
+

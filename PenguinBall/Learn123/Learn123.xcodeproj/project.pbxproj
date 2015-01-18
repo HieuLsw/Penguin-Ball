@@ -1,0 +1,542 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F64BAF831A697F920045990E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64BAF821A697F920045990E /* AppDelegate.swift */; };
+		F64BAF851A697F920045990E /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F64BAF841A697F920045990E /* GameScene.sks */; };
+		F64BAF871A697F920045990E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64BAF861A697F920045990E /* GameScene.swift */; };
+		F64BAF891A697F920045990E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64BAF881A697F920045990E /* GameViewController.swift */; };
+		F64BAF8C1A697F920045990E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F64BAF8A1A697F920045990E /* Main.storyboard */; };
+		F64BAF8E1A697F920045990E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F64BAF8D1A697F920045990E /* Images.xcassets */; };
+		F64BAF911A697F920045990E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F64BAF8F1A697F920045990E /* LaunchScreen.xib */; };
+		F64BAF9D1A697F920045990E /* Learn123Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64BAF9C1A697F920045990E /* Learn123Tests.swift */; };
+		F64BAFD91A6A67C30045990E /* Ball1.png in Resources */ = {isa = PBXBuildFile; fileRef = F64BAFD81A6A67C30045990E /* Ball1.png */; };
+		F64BB00D1A6A6E800045990E /* mygrass.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F64BB00C1A6A6E800045990E /* mygrass.jpeg */; };
+		F64BB00F1A6A76E60045990E /* log.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F64BB00E1A6A76E60045990E /* log.jpeg */; };
+		F6C9BFD61A6B013400266FD9 /* finalbg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F6C9BFD51A6B013400266FD9 /* finalbg.jpg */; };
+		F6C9BFD81A6B0A4200266FD9 /* penguin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F6C9BFD71A6B0A4200266FD9 /* penguin.jpg */; };
+		F6C9BFDA1A6B0B1F00266FD9 /* penguin2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F6C9BFD91A6B0B1F00266FD9 /* penguin2.jpg */; };
+		F6C9BFDC1A6B0B9A00266FD9 /* penguin3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F6C9BFDB1A6B0B9A00266FD9 /* penguin3.jpg */; };
+		F6C9BFDE1A6B0BE700266FD9 /* penguin4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F6C9BFDD1A6B0BE700266FD9 /* penguin4.jpg */; };
+		F6C9BFE01A6B0E6400266FD9 /* penguin.png in Resources */ = {isa = PBXBuildFile; fileRef = F6C9BFDF1A6B0E6400266FD9 /* penguin.png */; };
+		F6C9BFE21A6B26FB00266FD9 /* icicles1.png in Resources */ = {isa = PBXBuildFile; fileRef = F6C9BFE11A6B26FB00266FD9 /* icicles1.png */; };
+		F6C9BFE41A6B28DA00266FD9 /* icicles3.png in Resources */ = {isa = PBXBuildFile; fileRef = F6C9BFE31A6B28DA00266FD9 /* icicles3.png */; };
+		F6C9BFE61A6B2A1200266FD9 /* icicles2.png in Resources */ = {isa = PBXBuildFile; fileRef = F6C9BFE51A6B2A1200266FD9 /* icicles2.png */; };
+		F6C9BFE81A6B4AA400266FD9 /* Loading.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F6C9BFE71A6B4AA400266FD9 /* Loading.jpg */; };
+		F6F6718A1A6ABDE100A5AF9F /* hill.png in Resources */ = {isa = PBXBuildFile; fileRef = F6F671891A6ABDE100A5AF9F /* hill.png */; };
+		F6F671921A6AC8EA00A5AF9F /* bg1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F6F671911A6AC8EA00A5AF9F /* bg1.jpg */; };
+		F6F671941A6AC93800A5AF9F /* bg2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F6F671931A6AC93800A5AF9F /* bg2.jpg */; };
+		F6F671961A6ADB7800A5AF9F /* bg3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F6F671951A6ADB7800A5AF9F /* bg3.jpg */; };
+		F6F671981A6AE48500A5AF9F /* Ocean_ice1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F6F671971A6AE48500A5AF9F /* Ocean_ice1.jpg */; };
+		F6F6719A1A6AE57600A5AF9F /* ocean.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F6F671991A6AE57600A5AF9F /* ocean.jpg */; };
+		F6F6719C1A6AE68100A5AF9F /* bg4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F6F6719B1A6AE68100A5AF9F /* bg4.jpg */; };
+		F6FCAE9E1A6BD9EA003034A3 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = F6FCAE9D1A6BD9EA003034A3 /* stop.png */; };
+		F6FCAEA01A6BDA5A003034A3 /* stop2.png in Resources */ = {isa = PBXBuildFile; fileRef = F6FCAE9F1A6BDA5A003034A3 /* stop2.png */; };
+		F6FCAEA21A6BDAC3003034A3 /* stop3.png in Resources */ = {isa = PBXBuildFile; fileRef = F6FCAEA11A6BDAC3003034A3 /* stop3.png */; };
+		F6FCAEA41A6BDF8D003034A3 /* endpage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F6FCAEA31A6BDF8D003034A3 /* endpage.jpg */; };
+		F6FCAEA61A6BE3B0003034A3 /* frontpage.png in Resources */ = {isa = PBXBuildFile; fileRef = F6FCAEA51A6BE3B0003034A3 /* frontpage.png */; };
+		F6FCAEA81A6BE4FD003034A3 /* stop4.png in Resources */ = {isa = PBXBuildFile; fileRef = F6FCAEA71A6BE4FD003034A3 /* stop4.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F64BAF971A697F920045990E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F64BAF751A697F920045990E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F64BAF7C1A697F920045990E;
+			remoteInfo = Learn123;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F64BAF7D1A697F920045990E /* PenguinBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PenguinBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F64BAF811A697F920045990E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F64BAF821A697F920045990E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F64BAF841A697F920045990E /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		F64BAF861A697F920045990E /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		F64BAF881A697F920045990E /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		F64BAF8B1A697F920045990E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F64BAF8D1A697F920045990E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F64BAF901A697F920045990E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F64BAF961A697F920045990E /* PenguinBallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PenguinBallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F64BAF9B1A697F920045990E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F64BAF9C1A697F920045990E /* Learn123Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn123Tests.swift; sourceTree = "<group>"; };
+		F64BAFD81A6A67C30045990E /* Ball1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Ball1.png; path = ../../Ball1.png; sourceTree = "<group>"; };
+		F64BB00C1A6A6E800045990E /* mygrass.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = mygrass.jpeg; path = ../../mygrass.jpeg; sourceTree = "<group>"; };
+		F64BB00E1A6A76E60045990E /* log.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = log.jpeg; path = ../../log.jpeg; sourceTree = "<group>"; };
+		F6C9BFD51A6B013400266FD9 /* finalbg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = finalbg.jpg; sourceTree = "<group>"; };
+		F6C9BFD71A6B0A4200266FD9 /* penguin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = penguin.jpg; sourceTree = "<group>"; };
+		F6C9BFD91A6B0B1F00266FD9 /* penguin2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = penguin2.jpg; sourceTree = "<group>"; };
+		F6C9BFDB1A6B0B9A00266FD9 /* penguin3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = penguin3.jpg; sourceTree = "<group>"; };
+		F6C9BFDD1A6B0BE700266FD9 /* penguin4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = penguin4.jpg; sourceTree = "<group>"; };
+		F6C9BFDF1A6B0E6400266FD9 /* penguin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = penguin.png; sourceTree = "<group>"; };
+		F6C9BFE11A6B26FB00266FD9 /* icicles1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icicles1.png; sourceTree = "<group>"; };
+		F6C9BFE31A6B28DA00266FD9 /* icicles3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icicles3.png; sourceTree = "<group>"; };
+		F6C9BFE51A6B2A1200266FD9 /* icicles2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icicles2.png; sourceTree = "<group>"; };
+		F6C9BFE71A6B4AA400266FD9 /* Loading.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Loading.jpg; sourceTree = "<group>"; };
+		F6F671891A6ABDE100A5AF9F /* hill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hill.png; sourceTree = "<group>"; };
+		F6F671911A6AC8EA00A5AF9F /* bg1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bg1.jpg; path = ../bg1.jpg; sourceTree = "<group>"; };
+		F6F671931A6AC93800A5AF9F /* bg2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg2.jpg; sourceTree = "<group>"; };
+		F6F671951A6ADB7800A5AF9F /* bg3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg3.jpg; sourceTree = "<group>"; };
+		F6F671971A6AE48500A5AF9F /* Ocean_ice1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ocean_ice1.jpg; sourceTree = "<group>"; };
+		F6F671991A6AE57600A5AF9F /* ocean.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ocean.jpg; sourceTree = "<group>"; };
+		F6F6719B1A6AE68100A5AF9F /* bg4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg4.jpg; sourceTree = "<group>"; };
+		F6FCAE9D1A6BD9EA003034A3 /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
+		F6FCAE9F1A6BDA5A003034A3 /* stop2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop2.png; sourceTree = "<group>"; };
+		F6FCAEA11A6BDAC3003034A3 /* stop3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop3.png; sourceTree = "<group>"; };
+		F6FCAEA31A6BDF8D003034A3 /* endpage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = endpage.jpg; sourceTree = "<group>"; };
+		F6FCAEA51A6BE3B0003034A3 /* frontpage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frontpage.png; sourceTree = "<group>"; };
+		F6FCAEA71A6BE4FD003034A3 /* stop4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop4.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F64BAF7A1A697F920045990E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F64BAF931A697F920045990E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F64BAF741A697F920045990E = {
+			isa = PBXGroup;
+			children = (
+				F64BAF7F1A697F920045990E /* PenguinBall */,
+				F64BAF991A697F920045990E /* Learn123Tests */,
+				F64BAF7E1A697F920045990E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F64BAF7E1A697F920045990E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F64BAF7D1A697F920045990E /* PenguinBall.app */,
+				F64BAF961A697F920045990E /* PenguinBallTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F64BAF7F1A697F920045990E /* PenguinBall */ = {
+			isa = PBXGroup;
+			children = (
+				F64BAF821A697F920045990E /* AppDelegate.swift */,
+				F64BAF841A697F920045990E /* GameScene.sks */,
+				F64BAF861A697F920045990E /* GameScene.swift */,
+				F64BAF881A697F920045990E /* GameViewController.swift */,
+				F64BAF8A1A697F920045990E /* Main.storyboard */,
+				F64BAF8D1A697F920045990E /* Images.xcassets */,
+				F64BAF8F1A697F920045990E /* LaunchScreen.xib */,
+				F64BAF801A697F920045990E /* Supporting Files */,
+			);
+			name = PenguinBall;
+			path = Learn123;
+			sourceTree = "<group>";
+		};
+		F64BAF801A697F920045990E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F64BB00E1A6A76E60045990E /* log.jpeg */,
+				F6FCAE9D1A6BD9EA003034A3 /* stop.png */,
+				F6C9BFE11A6B26FB00266FD9 /* icicles1.png */,
+				F6FCAEA51A6BE3B0003034A3 /* frontpage.png */,
+				F6FCAEA71A6BE4FD003034A3 /* stop4.png */,
+				F6FCAEA11A6BDAC3003034A3 /* stop3.png */,
+				F6C9BFE71A6B4AA400266FD9 /* Loading.jpg */,
+				F6FCAEA31A6BDF8D003034A3 /* endpage.jpg */,
+				F6C9BFDF1A6B0E6400266FD9 /* penguin.png */,
+				F6C9BFDD1A6B0BE700266FD9 /* penguin4.jpg */,
+				F6C9BFDB1A6B0B9A00266FD9 /* penguin3.jpg */,
+				F6FCAE9F1A6BDA5A003034A3 /* stop2.png */,
+				F6C9BFD91A6B0B1F00266FD9 /* penguin2.jpg */,
+				F6C9BFE31A6B28DA00266FD9 /* icicles3.png */,
+				F6F671911A6AC8EA00A5AF9F /* bg1.jpg */,
+				F6F671951A6ADB7800A5AF9F /* bg3.jpg */,
+				F6C9BFE51A6B2A1200266FD9 /* icicles2.png */,
+				F6F671931A6AC93800A5AF9F /* bg2.jpg */,
+				F6F671971A6AE48500A5AF9F /* Ocean_ice1.jpg */,
+				F6C9BFD71A6B0A4200266FD9 /* penguin.jpg */,
+				F6F6719B1A6AE68100A5AF9F /* bg4.jpg */,
+				F6C9BFD51A6B013400266FD9 /* finalbg.jpg */,
+				F6F671991A6AE57600A5AF9F /* ocean.jpg */,
+				F64BAFD81A6A67C30045990E /* Ball1.png */,
+				F64BB00C1A6A6E800045990E /* mygrass.jpeg */,
+				F64BAF811A697F920045990E /* Info.plist */,
+				F6F671891A6ABDE100A5AF9F /* hill.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F64BAF991A697F920045990E /* Learn123Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F64BAF9C1A697F920045990E /* Learn123Tests.swift */,
+				F64BAF9A1A697F920045990E /* Supporting Files */,
+			);
+			path = Learn123Tests;
+			sourceTree = "<group>";
+		};
+		F64BAF9A1A697F920045990E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F64BAF9B1A697F920045990E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F64BAF7C1A697F920045990E /* PenguinBall */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F64BAFA01A697F920045990E /* Build configuration list for PBXNativeTarget "PenguinBall" */;
+			buildPhases = (
+				F64BAF791A697F920045990E /* Sources */,
+				F64BAF7A1A697F920045990E /* Frameworks */,
+				F64BAF7B1A697F920045990E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PenguinBall;
+			productName = Learn123;
+			productReference = F64BAF7D1A697F920045990E /* PenguinBall.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F64BAF951A697F920045990E /* PenguinBallTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F64BAFA31A697F920045990E /* Build configuration list for PBXNativeTarget "PenguinBallTests" */;
+			buildPhases = (
+				F64BAF921A697F920045990E /* Sources */,
+				F64BAF931A697F920045990E /* Frameworks */,
+				F64BAF941A697F920045990E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F64BAF981A697F920045990E /* PBXTargetDependency */,
+			);
+			name = PenguinBallTests;
+			productName = Learn123Tests;
+			productReference = F64BAF961A697F920045990E /* PenguinBallTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F64BAF751A697F920045990E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Vaish Raman";
+				TargetAttributes = {
+					F64BAF7C1A697F920045990E = {
+						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = ENGRG675W3;
+					};
+					F64BAF951A697F920045990E = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = F64BAF7C1A697F920045990E;
+					};
+				};
+			};
+			buildConfigurationList = F64BAF781A697F920045990E /* Build configuration list for PBXProject "PenguinBall" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F64BAF741A697F920045990E;
+			productRefGroup = F64BAF7E1A697F920045990E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F64BAF7C1A697F920045990E /* PenguinBall */,
+				F64BAF951A697F920045990E /* PenguinBallTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F64BAF7B1A697F920045990E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6FCAEA01A6BDA5A003034A3 /* stop2.png in Resources */,
+				F6C9BFD81A6B0A4200266FD9 /* penguin.jpg in Resources */,
+				F6C9BFD61A6B013400266FD9 /* finalbg.jpg in Resources */,
+				F64BB00D1A6A6E800045990E /* mygrass.jpeg in Resources */,
+				F6F6719C1A6AE68100A5AF9F /* bg4.jpg in Resources */,
+				F64BAF911A697F920045990E /* LaunchScreen.xib in Resources */,
+				F64BAF8E1A697F920045990E /* Images.xcassets in Resources */,
+				F6FCAEA61A6BE3B0003034A3 /* frontpage.png in Resources */,
+				F6F671941A6AC93800A5AF9F /* bg2.jpg in Resources */,
+				F64BB00F1A6A76E60045990E /* log.jpeg in Resources */,
+				F6FCAEA81A6BE4FD003034A3 /* stop4.png in Resources */,
+				F6C9BFE81A6B4AA400266FD9 /* Loading.jpg in Resources */,
+				F6FCAEA41A6BDF8D003034A3 /* endpage.jpg in Resources */,
+				F6C9BFE01A6B0E6400266FD9 /* penguin.png in Resources */,
+				F6F6718A1A6ABDE100A5AF9F /* hill.png in Resources */,
+				F6C9BFE61A6B2A1200266FD9 /* icicles2.png in Resources */,
+				F6C9BFE41A6B28DA00266FD9 /* icicles3.png in Resources */,
+				F6C9BFDA1A6B0B1F00266FD9 /* penguin2.jpg in Resources */,
+				F64BAF851A697F920045990E /* GameScene.sks in Resources */,
+				F6F671921A6AC8EA00A5AF9F /* bg1.jpg in Resources */,
+				F6F671981A6AE48500A5AF9F /* Ocean_ice1.jpg in Resources */,
+				F6F671961A6ADB7800A5AF9F /* bg3.jpg in Resources */,
+				F6FCAEA21A6BDAC3003034A3 /* stop3.png in Resources */,
+				F6C9BFDC1A6B0B9A00266FD9 /* penguin3.jpg in Resources */,
+				F6F6719A1A6AE57600A5AF9F /* ocean.jpg in Resources */,
+				F6C9BFDE1A6B0BE700266FD9 /* penguin4.jpg in Resources */,
+				F6FCAE9E1A6BD9EA003034A3 /* stop.png in Resources */,
+				F64BAFD91A6A67C30045990E /* Ball1.png in Resources */,
+				F6C9BFE21A6B26FB00266FD9 /* icicles1.png in Resources */,
+				F64BAF8C1A697F920045990E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F64BAF941A697F920045990E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F64BAF791A697F920045990E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F64BAF871A697F920045990E /* GameScene.swift in Sources */,
+				F64BAF891A697F920045990E /* GameViewController.swift in Sources */,
+				F64BAF831A697F920045990E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F64BAF921A697F920045990E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F64BAF9D1A697F920045990E /* Learn123Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F64BAF981A697F920045990E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F64BAF7C1A697F920045990E /* PenguinBall */;
+			targetProxy = F64BAF971A697F920045990E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F64BAF8A1A697F920045990E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F64BAF8B1A697F920045990E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F64BAF8F1A697F920045990E /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F64BAF901A697F920045990E /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F64BAF9E1A697F920045990E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F64BAF9F1A697F920045990E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F64BAFA11A697F920045990E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Learn123/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = PenguinBall;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		F64BAFA21A697F920045990E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Learn123/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = PenguinBall;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		F64BAFA41A697F920045990E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Learn123Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = PenguinBallTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Learn123.app/Learn123";
+			};
+			name = Debug;
+		};
+		F64BAFA51A697F920045990E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Learn123Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = PenguinBallTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Learn123.app/Learn123";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F64BAF781A697F920045990E /* Build configuration list for PBXProject "PenguinBall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F64BAF9E1A697F920045990E /* Debug */,
+				F64BAF9F1A697F920045990E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F64BAFA01A697F920045990E /* Build configuration list for PBXNativeTarget "PenguinBall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F64BAFA11A697F920045990E /* Debug */,
+				F64BAFA21A697F920045990E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F64BAFA31A697F920045990E /* Build configuration list for PBXNativeTarget "PenguinBallTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F64BAFA41A697F920045990E /* Debug */,
+				F64BAFA51A697F920045990E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F64BAF751A697F920045990E /* Project object */;
+}

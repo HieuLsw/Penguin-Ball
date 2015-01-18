@@ -1,0 +1,16 @@
+#!/bin/sh
+
+dir1="$(dirname "$0")"
+
+export COTVNCDIR=${dir1}/../../bin
+echo ${COTVNCDIR} >/tmp/.e.$$
+PATH=${dir1}/../../VNC\ Viewer.app/Contents/MacOS/:${PATH}:${dir1}
+
+
+export TCLLIBPATH="${dir1}/../../lib/tile"
+
+
+
+
+# cd "${dir1}/../../../bin"
+exec wish "${dir1}/../..//bin/sshnew.tcl" 

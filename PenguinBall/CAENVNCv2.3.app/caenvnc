@@ -1,0 +1,11 @@
+#!/bin/sh
+
+dir1="$(dirname "$0")"
+
+export COTVNCDIR=${dir1}/bin
+export TCLLIBPATH="${dir1}/lib /usr/lib64/"
+PATH=${PATH}:${dir1}
+
+
+# cd "${dir1}/../../../bin"
+exec wish "${dir1}/bin/sshnew.tcl" 

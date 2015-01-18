@@ -33,12 +33,15 @@ class GameViewController: UIViewController {
     
     @IBOutlet weak var endgame: UIBarButtonItem!
     
+    var theScene: GameScene?
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
         if let scene = GameScene.unarchiveFromFile("GameScene") as? GameScene {
             // Configure the view.
+            theScene = scene
             let skView = self.view as SKView
             skView.showsFPS = true
             skView.showsNodeCount = true

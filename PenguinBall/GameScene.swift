@@ -21,15 +21,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var log3 = SKSpriteNode();
     //var score = convenience init(timeIntervalSinceNow seconds: 1);
 
-    //var addtime = 0.0;
+    var addspeed: Float = 0.0;
     //var hill = SKSpriteNode();
    // var score = 0;
     
     let ballCategory: UInt32 = 0x1 << 0
     let logCategory: UInt32 = 0x1 << 1
-    var run = true;
     
-    var parentVC: UIViewController?
+    var parentVC: GameViewController?
     
     override func didMoveToView(view: SKView) {
         
@@ -118,7 +117,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //println(pause);
         var timer = NSTimer.scheduledTimerWithTimeInterval(0.9, target: self, selector: Selector("CreateNewObstacle"), userInfo: nil, repeats: true)
         
-        
     }
     
     // func UpDateScore() {
@@ -140,7 +138,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             log1.position = CGPoint(x:self.frame.size.width * 0.9, y: self.frame.size.height * 0.19)
             
             log1.physicsBody = SKPhysicsBody (rectangleOfSize: CGSizeMake(200/4, 150/4))
-            log1.physicsBody?.velocity = CGVectorMake(-300.0, 0);
+            let xspeed = -300.0 - addspeed
+            log1.physicsBody?.velocity = CGVectorMake(CGFloat(xspeed), 0);
             log1.physicsBody?.affectedByGravity = false;
             log1.physicsBody?.usesPreciseCollisionDetection = false;
             
@@ -155,9 +154,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             log2.physicsBody?.dynamic = false;
             log2.physicsBody?.collisionBitMask = logCategory;
             log2.position = CGPoint(x:self.frame.size.width * 0.9, y: self.frame.size.height * 0.20)
-            log2.physicsBody = SKPhysicsBody (rectangleOfSize: CGSizeMake(140/6, 353/6))
+            log2.physicsBody = SKPhysicsBody (rectangleOfSize: CGSizeMake(140 / 6, 353 / 6))
             
-            log2.physicsBody?.velocity = CGVectorMake(-300.0, 0);
+            let g = -300.0 - addspeed
+            log2.physicsBody?.velocity = CGVectorMake(CGFloat(g), 0);
             log2.physicsBody?.affectedByGravity = false;
             log2.physicsBody?.usesPreciseCollisionDetection = false;
             
@@ -193,6 +193,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             println("hola");
             //log.physicsBody?.contactTestBitMask = ballCategory;
             
+            addspeed = addspeed + 2;
         }
         
     }
@@ -220,14 +221,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         if (((firstBody.categoryBitMask & logCategory) != 0) && (secondBody.categoryBitMask & ballCategory) != 0) {
             println("collision occured");
-            run = false;
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewControllerWithIdentifier("GameOver") as UIViewController
-            
             parentVC?.presentViewController(vc, animated: true, completion: nil)
+
         }
-        println("contact occured");
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {

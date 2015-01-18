@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="E6S-Bp-6MI">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -55,39 +57,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nqq-uI-JQx">
-                                <rect key="frame" x="134" y="446" width="112" height="79"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Back">
-                                            <attributes>
-                                                <font key="NSFont" metaFont="smallSystem"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <segue destination="E6S-Bp-6MI" kind="presentation" id="SCc-Ur-HvE"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BACK" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xbg-c1-dmy">
-                                <rect key="frame" x="143" y="446" width="118" height="79"/>
-                                <fontDescription key="fontDescription" name="HiraKakuProN-W6" family="Hiragino Kaku Gothic ProN" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="endpage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="K0u-yk-hbU">
+                            <imageView userInteractionEnabled="NO" alpha="0.84999999999999987" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="endpage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="K0u-yk-hbU">
                                 <rect key="frame" x="-17" y="0.0" width="415" height="693"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USd-ue-nu7">
+                                <rect key="frame" x="140" y="452" width="121" height="77"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="USd-ue-nu7" secondAttribute="height" multiplier="11:7" id="h7V-7P-etR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="30"/>
+                                <state key="normal" title="RePlay">
+                                    <color key="titleColor" red="0.97150031889999999" green="0.97150031889999999" blue="0.97150031889999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="E6S-Bp-6MI" kind="presentation" id="beI-ZQ-yiA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="USd-ue-nu7" firstAttribute="top" secondItem="VzY-v2-SDh" secondAttribute="bottom" constant="432" id="5uO-Yu-0jd">
+                                <variation key="heightClass=regular-widthClass=compact" constant="471"/>
+                            </constraint>
+                            <constraint firstItem="USd-ue-nu7" firstAttribute="width" secondItem="ezG-ae-C7J" secondAttribute="width" constant="-479" id="UdU-K3-E7M">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-241.5"/>
+                            </constraint>
+                            <constraint firstItem="USd-ue-nu7" firstAttribute="leading" secondItem="ezG-ae-C7J" secondAttribute="leadingMargin" constant="124" id="lKx-ZA-3sZ">
+                                <variation key="heightClass=regular-widthClass=compact" constant="105"/>
+                            </constraint>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2SH-Mw-KU2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ylO-6Y-vj0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="967" y="-1206"/>
+            <point key="canvasLocation" x="966" y="-1271.8125"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="cuz-Jl-ftx">
